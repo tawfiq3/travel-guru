@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <Navbar className="justify-content-around" >
             <img src={logo} href="#home" alt="light" className="logo-size" />
-            <input type="text" className="form-control searchBar" placeholder="Search your destination"/>
-           <div className="d-flex justify-content-around">
+            <input type="text" className="searchBar" placeholder="Search your destination"/>
+          
            <Nav  >
                 <Nav.Link style={{color: 'white'}} href="#news">News</Nav.Link>
             </Nav>
@@ -19,7 +19,7 @@ const Header = () => {
                 <Nav.Link style={{color: 'white'}} href="#login">Log In</Nav.Link>
             </Nav>
 
-           </div>
+   
 
         </Navbar>
     );
