@@ -1,12 +1,19 @@
 import React from 'react';
 import Header from '../Header/Header';
-import News from '../News/News';
 import './Home.css'
 
 const Home = () => {
     return (
         <div>
-           <Header/>     
+           <Header/>  
+           <div className="tour-section">
+                <div>
+                    <h2>Details will be here</h2>
+                </div>
+                <div>
+                    <h2>Card will be here</h2>
+                </div>
+           </div> 
         </div>
     );
 };
