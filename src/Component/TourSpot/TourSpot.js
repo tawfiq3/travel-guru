@@ -8,19 +8,23 @@ const TourSpot = () => {
     useEffect(() => {
         setSpot(data)
     }, [])
+    console.log(spot)
     const [showSpot, setShowSpot] = useState([])
     const handleCard = (selectSpot) => {
-        const clickedSpot = [...showSpot, selectSpot]
+        const clickedSpot = [selectSpot]
         setShowSpot(clickedSpot)
+    }
+    const handleTourForm = (chosenSpot) => {
+        console.log("kaj kore naki deki", chosenSpot)
     }
 
     return (
         <div className="d-flex justify-content-between" >
-            <div>
+            <div style = {{color:'white'}}>
                 {
                     showSpot.map(selectedSpot =>
-                        <SpotDetails spd={selectedSpot} />)
-                } || spot[1].name
+                        <SpotDetails spd={selectedSpot} handleTourForm={handleTourForm} />)
+                }
             </div>
             <div className="d-flex" >
                 {
