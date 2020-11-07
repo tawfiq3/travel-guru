@@ -1,19 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import './Home.css'
+import { data } from '../Data/Data'
+import TourSpot from '../TourSpot/TourSpot';
 
 const Home = () => {
     return (
         <div>
-           <Header/>  
-           <div className="tour-section">
-                <div>
-                    <h2>Details will be here</h2>
-                </div>
-                <div>
-                    <h2>Card will be here</h2>
-                </div>
-           </div> 
+            <Header />
+            <TourSpot/>
         </div>
     );
 };

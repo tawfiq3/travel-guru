@@ -1,0 +1,10 @@
+.card-size{
+    width: '14rem';
+    margin: '20px'; 
+    border-radius: '14px'
+}
+.card-img{
+    height: '17rem';
+    border-radius: '10px';
+    display: 'flex' 
+}
