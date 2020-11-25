@@ -1,26 +1,23 @@
 import React from 'react';
 import './Header.css'
 import logo from '../images/Logo.png'
-import {Nav, Navbar } from 'react-bootstrap';
+import { Button, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <Navbar className="justify-content-around" >
             <img src={logo} href="#home" alt="light" className="logo-size" />
-            <input type="text" className="searchBar" placeholder="Search your destination"/>
-          
-           <Nav  >
-                <Nav.Link style={{color: 'white'}} href="#news">News</Nav.Link>
+            <input type="text" className="searchBar" placeholder="Search your destination" />
+            <Nav>
+                <NavLink to="/news" style={{color:"white"}}>News</NavLink>
             </Nav>
             <Nav>
-                <Nav.Link style={{color: 'white'}} href="#destination">Destination</Nav.Link>
+                <NavLink to="/destination" style={{color:"white"}}>Destination</NavLink>
             </Nav>
             <Nav>
-                <Nav.Link style={{color: 'white'}} href="#login">Log In</Nav.Link>
+                <Button variant="warning" to="/login" style={{color:"black"}}>Log In</Button>
             </Nav>
-
-   
-
         </Navbar>
     );
 };

@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { SpotSelection } from '../../App';
 import { data } from '../Data/Data'
+import { SpotChosen } from '../Home/Home';
 import SpotDetails from './SpotDetails/SpotDetails';
 import SpotImage from './SpotImage/SpotImage';
 
 const TourSpot = () => {
-    const [spot, setSpot] = useState([])
-    useEffect(() => {
-        setSpot(data)
-    }, [])
-    console.log(spot)
-    const [showSpot, setShowSpot] = useState([])
-    const handleCard = (selectSpot) => {
-        const clickedSpot = [selectSpot]
-        setShowSpot(clickedSpot)
-    }
-    const handleTourForm = (chosenSpot) => {
-        console.log("kaj kore naki deki", chosenSpot)
-    }
+    const spot = useContext(SpotSelection)
+    const showSpot = useContext(SpotChosen)
+    const handlePlace = useContext(SpotChosen)
+    const handleTourForm = useContext(SpotChosen)
 
     return (
         <div className="d-flex justify-content-between" >
@@ -29,7 +22,7 @@ const TourSpot = () => {
             <div className="d-flex" >
                 {
                     spot.map(place =>
-                        <SpotImage placeImage={place} handleCard={handleCard}></SpotImage>
+                        <SpotImage placeImage={place} handlePlace={handlePlace}></SpotImage>
                     )
                 }
             </div>

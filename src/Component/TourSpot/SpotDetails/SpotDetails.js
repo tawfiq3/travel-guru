@@ -8,7 +8,7 @@ const SpotDetails = (props) => {
         <div style={{marginLeft: '60px',marginTop: '30px'}}>
             <h1>{spDetails.name}</h1>
             <p>{spDetails.shortDescription}</p>
-            <Button variant="warning" onClick={handleTourForm}>Booking Now </Button>
+            <Button variant="warning" onClick={()=>{handleTourForm(spDetails.id)}}>Booking Now </Button>
         </div>
     );
 };
