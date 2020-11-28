@@ -2,9 +2,14 @@ import React from 'react';
 import './Header.css'
 import logo from '../images/Logo.png'
 import { Button, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 const Header = () => {
+    const history = useHistory()
+    const handleLogin = () => {
+        const url = "/login"
+        history.push(url)
+    }
     return (
         <Navbar className="justify-content-around" >
             <img src={logo} href="#home" alt="light" className="logo-size" />
@@ -16,7 +21,7 @@ const Header = () => {
                 <NavLink to="/destination" style={{color:"white"}}>Destination</NavLink>
             </Nav>
             <Nav>
-                <Button variant="warning" to="/login" style={{color:"black"}}>Log In</Button>
+                <Button variant="warning" onClick={handleLogin} style={{color:"black"}}>Log In</Button>
             </Nav>
         </Navbar>
     );

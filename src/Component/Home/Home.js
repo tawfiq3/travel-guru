@@ -1,18 +1,29 @@
-import Header from '../Header/Header';
 import './Home.css'
-import TourSpot from '../TourSpot/TourSpot';
 import { createContext, useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { SpotLoaded } from '../../App';
+import SpotImage from '../SpotImage/SpotImage';
+import SpotDetails from '../SpotDetails/SpotDetails';
+
 const Home = () => {
     const spotLoaded = useContext(SpotLoaded)
-    console.log(spotLoaded)
+    const [selectedSpot, setSelectedSpot] = useState([])
+    const handleSelectedSpot = (selectedSpotInfo) => {
+        setSelectedSpot(selectedSpotInfo)   
+    }
     
         return (
             <div>
-                <Header />
-                
-                
+                <div style={{display: 'flex'}}>
+                    <div className="description-color">
+                        <SpotDetails selectedSpot={selectedSpot}/>
+                    </div>
+                    <div style={{display: 'flex'}}>
+                        {
+                            spotLoaded.map(spotImg => <SpotImage key={spotImg.id} handleSelectedSpot={handleSelectedSpot} spotImg={spotImg} />) 
+                        }
+                    </div>
+                </div>
             </div>
         );
     };

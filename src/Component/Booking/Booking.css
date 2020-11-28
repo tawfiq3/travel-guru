@@ -1,0 +1,11 @@
+.room-style{
+    color:white ;
+}
+.room{
+    width:300px;
+    height:250px;
+    margin:20px
+}
+.room-flex{
+    display: flex
+}

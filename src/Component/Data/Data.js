@@ -28,3 +28,39 @@ export const data = [
         "image": "./Image/Sajek.png"
     },
 ]
+
+export const hotel = [
+    {
+        "hId": 1,
+        "name": "Light bright airy stylish apt & safe peaceful stay",
+        "person": "4 guests",
+        "rooms": "2 bedrooms 2 beds 2 baths",
+        "service": "With Air Conditioning Kitchen",
+        "spService": "Cancellation flexibility available",
+        "price": "$34/night",
+        "rating": "4.9(20)",
+        "photo":"./Image/Rectangle 26.png"
+    },
+    {
+        "hId": 2,
+        "name": "Apartment in Lost Panorama ",
+        "person": "4 guests",
+        "rooms": "2 bedrooms 2 beds 2 baths",
+        "service": "With Air Conditioning Kitchen",
+        "spService": "Cancellation flexibility available",
+        "price": "$24/night",
+        "rating": "4.1(20)",
+        "photo":"./Image/Rectangle 27.png"
+    },
+    {
+        "hId": 3,
+        "name": "AR Lounge & Pool",
+        "person": "4 guests",
+        "rooms": "2 bedrooms 2 beds 2 baths",
+        "service": "With Air Conditioning Kitchen",
+        "spService": "Cancellation flexibility available",
+        "price": "$89/night",
+        "rating": "4.1(20)",
+        "photo":"./Image/Rectangle 28.png"
+    }
+]

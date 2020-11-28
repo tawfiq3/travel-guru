@@ -1,0 +1,15 @@
+.destination-place{
+    display: flex
+}
+.place-description{
+    color:white;
+    width: 40%;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.form-items{
+    background-color: white;
+    margin-left: 150px;
+    margin-top:110px;
+    padding: 20px
+}
